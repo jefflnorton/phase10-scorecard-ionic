@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('phase10-scorecard.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
@@ -53,4 +53,26 @@ angular.module('starter.controllers', [])
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
+})
+
+.controller('LoginCtrl', function($scope, $ionicSideMenuDelegate, $timeout, $location) {
+  $scope.loginData = {};
+
+  $ionicSideMenuDelegate.canDragContent(false);
+
+  $scope.$on('$ionicView.leave', function() {
+    $ionicSideMenuDelegate.canDragContent(true);
+  });
+
+  $scope.doLogin = function() {
+    console.log('Doing login:', $scope.loginData);
+
+    $timeout(function() {
+      $location.path('/app/home');
+    }, 1000);
+  };
+})
+
+.controller('HomeCtrl', function($scope) {
+
 });
