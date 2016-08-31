@@ -42,7 +42,7 @@ angular.module('phase10-scorecard', ['ionic', 'phase10-scorecard.controllers'])
     url: '/home',
     views: {
       'menuContent': {
-        templateUrl: 'templates/home.html',
+        templateUrl: 'templates/home/home.html',
         controller: 'HomeCtrl'
       }
     }
