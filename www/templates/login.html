@@ -4,6 +4,10 @@
         <h1 class="title">Login</h1>
       </div>
       <div class="list has-header">
+        <div class="item item-icon-left topless" ng-show="invalidLogin">
+          <i class="icon ion-alert-circled error"></i>
+          <span>Invalid Username or Password</span>
+        </div>
         <form ng-submit="doLogin()">
           <div class="list">
             <label class="item item-input">
